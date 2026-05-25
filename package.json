@@ -1,0 +1,39 @@
+{
+  "name": "fossilize-code",
+  "version": "0.2.0",
+  "description": "Turn a TypeScript/JavaScript repo into an AST skeleton so AI coding agents read structure first and expand bodies on demand.",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "agent",
+    "context",
+    "typescript",
+    "ast",
+    "tokens",
+    "llm"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "20 || >=22"
+  },
+  "bin": {
+    "fossil": "./dist/cli.js"
+  },
+  "files": ["dist", "skill", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "npm run build && node --test tests/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "glob": "^11.0.0",
+    "ts-morph": "^24.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

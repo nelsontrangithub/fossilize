@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.tgz
+.fossil/
+fossil-bench.tsv
+.DS_Store
